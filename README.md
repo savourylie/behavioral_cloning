@@ -68,13 +68,13 @@ The following steps are taken for data preprocessing:
 #### Create a balance dataset
 As said earlier, it is crucial to make sure that we have a balance dataset before training. A quick look at the steering angle histogram and we can see that more of the data are near the 0.
 
-![Alt text](./st_hist.png)
+![Alt text](./demo_images/st_hist.png)
 
 The peaks at around $\pm 0.2$ and the duplicated pattern come from my manipulation of the left/camera images. The images are used to simulate cars driving close to the edges of the lane. The cameras are set up to form angles of $\pm 0.25$ with the center camera so I made a slight adjustment to them so that the steering angles of the left cameras images are compensated by $+0.2$ and the right by $-0.2$.
 
 I put the angles in 20 bins and apply a threshold of 2000 so that no bins can have more than 2000 entries. And the result is a far more balanced dataset:
 
-![Alt text](./st_hist2.png)
+![Alt text](./demo_images/st_hist2.png)
 
 We can see that the sharp turns still don't have a lot of records and the model can definitely benefit from more data. But for our purpose here this is good enough.
 
