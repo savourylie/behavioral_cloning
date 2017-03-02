@@ -17,6 +17,7 @@ from keras.models import model_from_json
 from keras.optimizers import Adam
 from math import floor
 from sklearn.utils import shuffle
+from pathos.multiprocessing import ProcessingPool as Pool
 
 def load_images_from_folder(X_train_names):
     # images = []
